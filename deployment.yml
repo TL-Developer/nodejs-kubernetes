@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejsk8s-deployment
+  namespace: nodejsk8s
+  labels:
+    app: nodejsk8s
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejsk8s
+  template:
+    metadata:
+      labels:
+        app: nodejsk8s
+    spec:
+      containers:
+      - name: nodejsk8s
+        image: liminha/nodejs-kubernetes:latest
+        ports:
+        - containerPort: 3000
+          # protocol: TCP
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "250m"
+          limits:
+            memory: "500Mi"
+            cpu: "1000m"

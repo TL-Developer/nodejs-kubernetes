@@ -42,7 +42,7 @@ Mock response with faker
 # kubernetes port forward namespace monitoring and nodejs all
 ```
 kubectl port-forward -n nodejsk8s svc/nodejsk8s-service 8181:5000 & \
-kubectl port-forward -n monitoring svc/grafana 3000:3000 & \
+kubectl port-forward -n monitoring svc/grafana 33000:3000 & \
 kubectl.exe port-forward -n monitoring svc/prometheus-k8s 9090:9090 & \
 kubectl.exe port-forward -n monitoring svc/node-exporter 9100:9100 & \
 kubectl.exe port-forward -n monitoring svc/alertmanager-main 9093:9093 & \
